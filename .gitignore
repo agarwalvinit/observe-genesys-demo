@@ -1,2 +1,4 @@
 node_modules/
 /docs/wizard/_scratch/
+.idea/
+.DS_Store
