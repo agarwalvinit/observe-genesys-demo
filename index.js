@@ -14,7 +14,7 @@ var app = express();
 
 app.use(express.static(__dirname+ "/docs"));
 
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
 var sslOptions = {
     key: fs.readFileSync('https-requirements/_localhost.key'),
@@ -28,6 +28,8 @@ var httpsServer = https.createServer(sslOptions, app);
 
 var httpsPort = 3001;
 
-console.log("starting on " + httpsPort + ' (https)');
 httpServer.listen(app.get('port'));
-httpsServer.listen(httpsPort);
+console.log("App started on port : " + app.get('port'));
+
+// console.log("starting on " + httpsPort + ' (https)');
+// httpsServer.listen(httpsPort);
