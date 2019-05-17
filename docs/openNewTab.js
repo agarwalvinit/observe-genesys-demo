@@ -1,1 +1,1 @@
-window.open('https://www.observe.ai/', '_blank');
+window.parent.open('https://www.observe.ai/', '_blank');
