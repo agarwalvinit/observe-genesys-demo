@@ -5,7 +5,7 @@ export default {
         'mypurecloud.com.au': 'c8a4d721-3fbb-4f50-b3e0-aa49bf86ac87',
         'mypurecloud.jp': '28dbeebd-8128-4fe0-8f42-f2eebb767a71'
     },
-    "redirectUriBase": "https://mypurecloud.github.io/purecloud-premium-app/",
+    "redirectUriBase": "https://node-server-101.herokuapp.com/",
     //"redirectUriBase": "https://localhost/",
 
     // PureCloud assigned name for the premium app
