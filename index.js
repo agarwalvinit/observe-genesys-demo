@@ -26,7 +26,7 @@ var sslOptions = {
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(sslOptions, app);
 
-var httpsPort = 443;
+var httpsPort = 3001;
 
 console.log("starting on " + httpsPort + ' (https)');
 httpServer.listen(app.get('port'));
