@@ -11,6 +11,7 @@ var https = require("https"),
     fs = require("fs");
 var express = require('express');
 var app = express();
+var cors = require('cors');
 
 app.use(express.static(__dirname+ "/docs"));
 app.use(cors());
