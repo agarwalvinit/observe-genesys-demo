@@ -13,7 +13,7 @@ var express = require('express');
 var app = express();
 
 app.use(express.static(__dirname+ "/docs"));
-
+app.use(cors());
 app.set('port', process.env.PORT || 3000);
 
 var sslOptions = {
