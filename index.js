@@ -15,6 +15,7 @@ var cors = require('cors');
 
 app.use(express.static(__dirname+ "/docs"));
 app.use(cors());
+app.options('*', cors());
 app.set('port', process.env.PORT || 3000);
 
 var sslOptions = {
