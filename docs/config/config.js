@@ -1,6 +1,6 @@
 export default {
     clientIDs: {        
-        'mypurecloud.com': '47e2360f-9f05-4b21-a9ea-5af82b0e0550',
+        'mypurecloud.com': '85c83bc1-9972-4ddd-861d-2ff56881b347',
         'mypurecloud.ie': '939ab4dd-109f-4120-ba9f-051b973b9ecc',
         'mypurecloud.com.au': 'c8a4d721-3fbb-4f50-b3e0-aa49bf86ac87',
         'mypurecloud.jp': '28dbeebd-8128-4fe0-8f42-f2eebb767a71'
