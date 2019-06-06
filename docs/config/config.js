@@ -1,6 +1,6 @@
 export default {
     clientIDs: {        
-        'mypurecloud.com': '9fe6e964-33fa-4183-94d1-60e232a8bb85',
+        'mypurecloud.com': '3ae8cd98-f6ed-4788-871b-9839adad8537',
         'mypurecloud.ie': '939ab4dd-109f-4120-ba9f-051b973b9ecc',
         'mypurecloud.com.au': 'c8a4d721-3fbb-4f50-b3e0-aa49bf86ac87',
         'mypurecloud.jp': '28dbeebd-8128-4fe0-8f42-f2eebb767a71'
@@ -15,7 +15,7 @@ export default {
     // Default Values for fail-safe/testing. Shouldn't have to be changed since the app
     // must be able to determine the environment from the query parameter 
     // of the integration's URL
-    "defaultPcEnv": "mypurecloud.com",
+    "defaultPcEnv": "mypurecloud.com",  
     "defaultLangTag": "en-us",
 
     // Permissions required for running the Wizard App
