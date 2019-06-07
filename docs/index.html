@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Incoming Conversation</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Premium App Wizard</title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' async type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="//fonts.googleapis.com/css?family=Lato:300,400"
+      rel="stylesheet"
+      async
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./wizard/style.css" />
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>    
-    <script src="https://cdn.jsdelivr.net/npm/chronomouse@2.4.0/chronomouse.2.4.0.min.js"></script>
-    <script src="https://sdk-cdn.mypurecloud.com/client-apps/1.0.0/purecloud-client-app-sdk.js"></script>
-    <script src="https://sdk-cdn.mypurecloud.com/javascript/29.1.0/purecloud-platform-client-v2.min.js"></script>
-</head>
-<body>
-    <h1 id="txtIncomingCall"></h1>
-    <div>
-        <div id="txtName" class="floating field-title"></div>
-        <div id="callerName" class="floating field-value"></div>   
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <script src="./wizard/scripts/util.js"></script>
+  </head>
+  <body>
+    <div id="background"></div>
+    <noscript>
+      For full functionality of this site it is necessary to enable JavaScript.
+      Here are the
+      <a href="http://www.enable-javascript.com/" target="_blank"
+        >instructions how to enable JavaScript in your web browser</a
+      >.
+    </noscript>
+
+    <header>
+      <img src="../public/logo.svg" alt="Observe.ai Logo" />
+      <p>Premium App /&nbsp; Home</p>
+    </header>
+
+    <div class="content">
+      <div class="title">
+        <span class="txt-greeting">
+          Hi
+        </span>
+        <span id="username"></span>!
+        <div class="txt-greeting-2">
+          Welcome to the Observe.ai Premium App
+        </div>
+      </div>
+
+      <ul class="progress-bar">
+        <li class="active current">
+          <span class="txt-start">Start</span>
+        </li>
+        <li class="">
+          <span class="txt-install">Install</span>
+        </li>
+      </ul>
+
+      <main>
+        <div id="available">
+          <p class="success">
+            <span class="txt-product-available">Product Available </span>
+            <i class="fas fa-check-circle enlarge"></i>
+          </p>
+          <p>
+            <span class="txt-available-message"
+              >We're ready to set you up. Please click the Start button.</span
+            >
+          </p>
+          <button
+            id="next"
+            onclick="goToPage('./wizard/install')"
+            class="btn-info right"
+          >
+            <span class="txt-start">Start</span>
+            <i class="button-icon fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </main>
     </div>
-    <div>
-        <div id="txtNumber" class="floating field-title"></div>
-        <div id="callerNumber" class="floating field-value"></div>   
-    </div>
-    <div>
-        <div id="txtStateInfo" class="floating field-title"></div>
-        <div id="callerArea" class="floating field-value"></div>   
-    </div>
-
-    <script type="module">
-        import clientApp from './client_app.js';
-        
-        // Setup the client app with the redirectUri
-        clientApp.setup("index.html")
-
-        // Assign text to the page based on language
-        .then(() => {
-            $("#txtIncomingCall").text("\u260E " + clientApp.languageData.IncomingCall);
-            $("#txtName").text(clientApp.languageData.Name + ": ");
-            $("#txtNumber").text(clientApp.languageData.Number + ": ");
-            $("#txtStateInfo").text(clientApp.languageData.StateInfo + ": ");
-        })
-
-        // Set-up the Client App SDK for toast interaction
-        .then(() => {
-            clientApp.purecloudClientApi = new window.purecloud.apps.ClientApp({pcEnvironment: clientApp.pcEnv});
-        })
-    </script>
-</body> 
+  </body>
 </html>
