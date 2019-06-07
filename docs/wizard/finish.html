@@ -51,11 +51,7 @@
     <script>
       $(document).ready(() => {
         $("#goToObserve").click(() => {
-          if (window.self !== window.top) {
-            window.top.open("https://app-internal.observe.ai/", "_blank");
-          } else {
-            window.open("https://app-internal.observe.ai/", "_blank");
-          }
+          window.open("https://app-internal.observe.ai/", "_blank");
         });
       });
     </script>
